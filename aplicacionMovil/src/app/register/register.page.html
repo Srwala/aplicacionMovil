@@ -1,15 +1,43 @@
 <ion-header>
-  <ion-toolbar style="--background:#ff8800;--color: #000000;">
-    <ion-title>Registro</ion-title>
+  <ion-toolbar style=" --background:#ff8800; --color: #000000;">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<ion-content class="ion-padding">
-<ion-card-content>
-  <ion-item>
-    <ion-label position="floating" >Ingrese su Nombre</ion-label>
-    <ion-input type="name"></ion-input>
-  </ion-item>
-  <ion-button expand="block"
-      [routerLink]="['/login']"   style="--background:#ff8800;--color: #000000;" class="ion-margin-top">Ingresar</ion-button>
-</ion-card-content>
+
+<ion-content class="ion-padding" scroll-padding="false" keyboard-attach>
+  <div class="login-container">
+    <ion-card class="transparent-card">
+      <ion-card-header>
+        <ion-card-title>Registrarse</ion-card-title>
+      </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating" >Nombres</ion-label>
+        <ion-input type="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating" >Apellido Paterno</ion-label>
+        <ion-input type="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating" >Apellido Materno</ion-label>
+        <ion-input type="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <ion-button expand="block"
+          [routerLink]="['/login']"   style="--background:#ff8800;--color: #000000;" class="ion-margin-top">Crear cuenta</ion-button>
+   </ion-card-content>
+  </ion-card>
+  </div>
 </ion-content>
