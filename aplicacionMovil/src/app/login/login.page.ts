@@ -1,15 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { NavController, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class LoginPage {
+  username: string = ''; 
 
-  constructor() { }
+  constructor(private navCtrl: NavController, private alertController: AlertController) {}
 
-  ngOnInit() {
+  async onLogin() {
+    
+    this.navCtrl.navigateRoot('/qr'); 
+ 
+    await this.showWelcomeAlert();
   }
+  async showWelcomeAlert() {
+    const alert = await this.alertController.create({
+      header: 'Bienvenido',
+      message: `¡Bienvenido, ${this.username}!`, 
+      buttons: ['OK']
+    });
 
+    await alert.present();
+  }
 }
