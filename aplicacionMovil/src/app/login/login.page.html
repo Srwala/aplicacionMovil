@@ -1,12 +1,8 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content class="ion-padding">
+
+<ion-content class="ion-padding" scroll-padding="false" keyboard-attach>
   <div class="login-container">
-    <ion-card>
+    <ion-card class="transparent-card">
       <ion-card-header>
         <ion-card-title>Iniciar Sesión</ion-card-title>
       </ion-card-header>
@@ -22,7 +18,7 @@
           <ion-input type="password"></ion-input>
         </ion-item>
 
-        <ion-button expand="block" color="primary" class="ion-margin-top">
+        <ion-button [routerLink]="['']" expand="block" color="primary" class="ion-margin-top">
           Ingresar
         </ion-button>
       </ion-card-content>
