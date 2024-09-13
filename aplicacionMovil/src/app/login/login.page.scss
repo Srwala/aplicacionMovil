@@ -26,13 +26,13 @@ ion-button{
     margin-bottom: 3em;
 }
 ion-content {
-    --background: none;
-    background-image: url('/assets/images/descarga.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
-  }
+  --background: none;
+  background-image: url('/assets/images/wallpaper2.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
   ion-card-content{
     --background: transparent;
   }
@@ -40,7 +40,7 @@ ion-content {
     width: 100%;
     max-width: 400px; /* Ajusta según sea necesario */
     margin: 0 20px; /* Espaciado lateral */
-    background: rgba(255, 255, 255, 0.08);
+    background: #ff8800 (255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
     border-radius: 10px; 
   }

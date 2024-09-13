@@ -26,3 +26,15 @@
   text-decoration: none;
 }
 
+#container welcome-container{
+  --background: none;
+  background-image: url('/assets/images/descarga.jpg'); 
+}
+ion-content {
+  --background: none;
+  background-image: url('/assets/images/wallpaper2.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
