@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QrPage implements OnInit {
 
+  nombreRecuperado: string = '';
   constructor() { }
 
   ngOnInit() {
+    const nombre = localStorage.getItem('nombreUsuario');
+    this.nombreRecuperado = nombre ? nombre : '';
+    console.log('Nombre recuperado:', this.nombreRecuperado);
   }
-
 }
