@@ -1,22 +1,36 @@
 <ion-app>
-  <ion-menu contentId="main-content">
+  <ion-menu contentId="main-content" >
     <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu Content</ion-title>
+      <ion-toolbar style="--background:#ff8800; --color: #000000;">
+        <ion-title >Menu</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding">This is the menu content.</ion-content>
+    <ion-content class="ion-padding" style="--background: #000000;">
+      <ion-button expand="block" style="margin-bottom: 10px; --background:#ff8800; --color: #000000;" routerLink="/home">
+        Home
+        </ion-button>
+      <ion-button expand="block" style="margin-bottom: 10px; --background:#ff8800; --color: #000000;" routerLink="/login">
+      Iniciar sesión
+      </ion-button>
+    <ion-button expand="block" style="margin-top: 5px; --background:#ff8800; --color: #000000;" routerLink="/register">
+      Registrarse
+    </ion-button>
+  </ion-content>
   </ion-menu>
-  <div class="ion-page" id="main-content">
+  <div class="ion-page" id="main-content" >
     <ion-header>
       <ion-toolbar>
         <ion-buttons slot="start">
-          <ion-menu-button></ion-menu-button>
+          <ion-menu-button>
+
+          </ion-menu-button>
         </ion-buttons>
+        
         <ion-title>Menu</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
   </div>
+
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
