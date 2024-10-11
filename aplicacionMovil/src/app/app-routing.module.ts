@@ -14,7 +14,8 @@ const routes: Routes = [
   {
     path: 'access',
     loadChildren: () => import('./access/access.module').then( m => m.AccessPageModule)
-  },  {
+  },
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
@@ -26,7 +27,11 @@ const routes: Routes = [
     path: 'qr',
     loadChildren: () => import('./qr/qr.module').then( m => m.QrPageModule)
   },
-
+  {
+    path: 'api',
+    loadChildren: () => import('./api/api.module').then( m => m.ApiPageModule)
+  },
+  { path: 'api', loadChildren: () => import('./api/api.module').then(m => m.ApiPageModule) },
 ];
 
 @NgModule({
