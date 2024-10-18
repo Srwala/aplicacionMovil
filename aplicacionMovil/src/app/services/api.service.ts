@@ -1,38 +1,42 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
+import { Observable, of } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
-  private apiUrl = 'https://jsonplaceholder.typicode.com/posts';  // URL de la API
+  private url = 'https://randomuser.me/api/?results=30';
 
   constructor(private http: HttpClient) {}
 
-  // Método GET para obtener todos los posts
-  getPosts(): Observable<any> {
-    return this.http.get(this.apiUrl);
+  private getRandomStudents(): Observable<any> {
+    return this.http.get<any>(this.url);
   }
 
-  // Método GET para obtener un post por ID
-  getPost(id: number): Observable<any> {
-    return this.http.get(`${this.apiUrl}/${id}`);
+  private saveStudentsToLocal(students: any) {
+    localStorage.setItem('randomStudents', JSON.stringify(students));
   }
 
-  // Método POST para crear un nuevo post
-  createPost(post: any): Observable<any> {
-    return this.http.post(this.apiUrl, post);
+  private getUsersFromLocal() {
+    const users = localStorage.getItem('randomStudents');
+    return users ? JSON.parse(users) : null;
   }
-
-  // Método PUT para actualizar un post por ID
-  updatePost(id: number, post: any): Observable<any> {
-    return this.http.put(`${this.apiUrl}/${id}`, post);
-  }
-
-  // Método DELETE para eliminar un post por ID
-  deletePost(id: number): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/${id}`);
+  loadStudents(): Observable<any[]> {
+    const localUsers = this.getUsersFromLocal();
+    if (localUsers) {
+      return of(localUsers);
+    } else {
+      return this.getRandomStudents().pipe(
+        map((response) => {
+          this.saveStudentsToLocal(response.results);
+          return response.results;
+        }),
+        catchError((error) => {
+          console.error('Error fetching student:', error);
+          return of([]);
+        })
+      );
+    }
   }
 }
-
