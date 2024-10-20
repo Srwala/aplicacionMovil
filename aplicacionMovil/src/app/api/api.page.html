@@ -7,7 +7,7 @@
 <ion-content>
   <ion-list *ngFor="let user of users">
     <ion-item >
-      {{user.name.first}} {{user.name.last}} <img [src]="user.picture.thumbnail" />
+     <img [src]="user.picture.thumbnail" />&nbsp;{{user.name.first}} {{user.name.last}}
     </ion-item>
   </ion-list>
 </ion-content>
