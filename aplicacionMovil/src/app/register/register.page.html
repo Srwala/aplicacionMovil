@@ -1,10 +1,9 @@
 <ion-header>
-  <ion-toolbar style=" --background:#ff8800; --color: #000000;">
+  <ion-toolbar style="--background:#ff8800; --color: #000000;">
     <ion-buttons slot="start">
       <ion-menu-button auto-hide="false"></ion-menu-button>
     </ion-buttons>
-    
-    </ion-toolbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding" scroll-padding="false" keyboard-attach>
@@ -14,33 +13,42 @@
         <ion-card-title>Registrarte</ion-card-title>
       </ion-card-header>
 
-    <ion-card-content>
-      <ion-item>
-        <ion-label position="floating" >Nombres</ion-label>
-        <ion-input type="name"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating" >Apellido Paterno</ion-label>
-        <ion-input type="name"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating" >Apellido Materno</ion-label>
-        <ion-input type="name"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Correo Electrónico</ion-label>
-        <ion-input type="email"></ion-input>
-      </ion-item>
+      <ion-card-content>
+        <form (ngSubmit)="registrarUsuario()" #registroForm="ngForm">
+          <ion-item>
+            <ion-label position="floating">Nombres</ion-label>
+            <ion-input [(ngModel)]="nombres" name="nombres" type="text" required></ion-input>
+            <ion-note *ngIf="registroForm.submitted && !nombres" color="danger">Este campo es requerido</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Apellido Paterno</ion-label>
+            <ion-input [(ngModel)]="apellidoPaterno" name="apellidoPaterno" type="text" required></ion-input>
+            <ion-note *ngIf="registroForm.submitted && !apellidoPaterno" color="danger">Este campo es requerido</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Apellido Materno</ion-label>
+            <ion-input [(ngModel)]="apellidoMaterno" name="apellidoMaterno" type="text" required></ion-input>
+            <ion-note *ngIf="registroForm.submitted && !apellidoMaterno" color="danger">Este campo es requerido</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Correo Electrónico</ion-label>
+            <ion-input [(ngModel)]="correo" name="correo" type="email" required></ion-input>
+            <ion-note *ngIf="registroForm.submitted && !correo" color="danger">Este campo es requerido</ion-note>
+            <ion-note *ngIf="registroForm.submitted && correo && !isEmailValid(correo)" color="danger">Correo no válido</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input [(ngModel)]="contrasena" name="contrasena" type="password" required minlength="6"></ion-input>
+            <ion-note *ngIf="registroForm.submitted && !contrasena" color="danger">Este campo es requerido</ion-note>
+            <ion-note *ngIf="registroForm.submitted && contrasena && contrasena.length < 6" color="danger">La contraseña debe tener al menos 6 caracteres</ion-note>
+          </ion-item>
 
-      <ion-item>
-        <ion-label position="floating">Contraseña</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
-      <ion-button expand="block"
-          [routerLink]="['/login']"   style="--background:#ff8800;--color: #000000;" class="ion-margin-top">Registrarte</ion-button>
-            Al hacer clic en "Registrarte", aceptas nuestras Condiciones, la Política de privacidad y la Política de cookies.
-          
-   </ion-card-content>
-  </ion-card>
+          <ion-button expand="block" type="submit" style="--background:#ff8800; --color: #000000;" class="ion-margin-top">
+            Registrarte
+          </ion-button>
+          <p>Al hacer clic en "Registrarte", aceptas nuestras Condiciones, la Política de privacidad y la Política de cookies.</p>
+        </form>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>

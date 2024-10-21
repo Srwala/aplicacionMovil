@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -20,11 +21,13 @@ export class ApiService {
 
   private getUsersFromLocal() {
     const users = localStorage.getItem('randomStudents');
-    return users ? JSON.parse(users) : null;
+    return users ? JSON.parse(users) : [];
   }
+
+  // Cargar estudiantes desde la API o localStorage
   loadStudents(): Observable<any[]> {
     const localUsers = this.getUsersFromLocal();
-    if (localUsers) {
+    if (localUsers && localUsers.length > 0) {
       return of(localUsers);
     } else {
       return this.getRandomStudents().pipe(
@@ -38,5 +41,21 @@ export class ApiService {
         })
       );
     }
+  }
+
+  // Agregar un nuevo estudiante a localStorage
+  addStudent(student: any): Observable<any[]> {
+    const students = this.getUsersFromLocal();
+    students.push(student);
+    this.saveStudentsToLocal(students);
+    return of(students);
+  }
+
+  // Eliminar un estudiante de localStorage
+  deleteStudent(index: number): Observable<any[]> {
+    let students = this.getUsersFromLocal();
+    students.splice(index, 1); // Eliminar el estudiante por índice
+    this.saveStudentsToLocal(students);
+    return of(students);
   }
 }

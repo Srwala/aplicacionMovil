@@ -31,7 +31,11 @@ const routes: Routes = [
     path: 'api',
     loadChildren: () => import('./api/api.module').then( m => m.ApiPageModule)
   },
-  { path: 'api', loadChildren: () => import('./api/api.module').then(m => m.ApiPageModule) },
+  { path: 'api', loadChildren: () => import('./api/api.module').then(m => m.ApiPageModule) },  {
+    path: 'recupera-clave',
+    loadChildren: () => import('./recupera-clave/recupera-clave.module').then( m => m.RecuperaClavePageModule)
+  },
+
 ];
 
 @NgModule({

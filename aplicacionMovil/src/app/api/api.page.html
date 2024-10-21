@@ -1,13 +1,31 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Posts</ion-title>
+  <!-- Toolbar con menú y colores personalizados -->
+  <ion-toolbar style="--background:#ff8800; --color: #000000;">
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Alumnos</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-list *ngFor="let user of users">
-    <ion-item >
-     <img [src]="user.picture.thumbnail" />&nbsp;{{user.name.first}} {{user.name.last}}
+<ion-content [fullscreen]="true" class="home-content" style=" --background:#000000;">
+
+  <!-- Formulario para agregar un nuevo alumno -->
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="newFirstName"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Apellido</ion-label>
+    <ion-input [(ngModel)]="newLastName"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="addStudent()">Agregar Alumno</ion-button>
+
+  <!-- Lista de estudiantes -->
+  <ion-list *ngFor="let user of users; let i = index">
+    <ion-item>
+      <img [src]="user.picture.thumbnail" />&nbsp;{{user.name.first}} {{user.name.last}}
+      <ion-button slot="end" color="danger" (click)="removeStudent(i)">Eliminar</ion-button>
     </ion-item>
   </ion-list>
 </ion-content>
