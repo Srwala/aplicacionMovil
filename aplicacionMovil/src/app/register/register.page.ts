@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router'; // Importa el Router
 
 @Component({
   selector: 'app-registrarse',
@@ -12,12 +13,12 @@ export class RegisterPage {
   apellidoMaterno: string = '';
   correo: string = '';
   contrasena: string = '';
+  errorMessage: string = '';
 
-  constructor() {}
+  constructor(private router: Router) {} // Inyecta el Router
 
   // Método para registrar el usuario
   registrarUsuario() {
-    // Verificar que todos los campos estén completos
     if (this.isFormValid()) {
       // Crear un objeto usuario
       const usuario = {
@@ -31,12 +32,11 @@ export class RegisterPage {
       // Guardar el usuario en localStorage
       localStorage.setItem('usuarioRegistrado', JSON.stringify(usuario));
 
-      // Redireccionar a la página de inicio de sesión o mostrar mensaje de éxito
-      console.log('Usuario registrado:', usuario);
-      // Aquí puedes redirigir a otra página si es necesario
+      // Redireccionar a la página de inicio de sesión
+      this.router.navigate(['/login']); // Aquí cambias a la ruta correspondiente
     } else {
-      console.log('Por favor completa todos los campos correctamente');
-      // Aquí puedes mostrar un mensaje de error si algún campo está vacío o es inválido
+      this.errorMessage = 'Por favor completa todos los campos correctamente';
+      console.log(this.errorMessage);
     }
   }
 

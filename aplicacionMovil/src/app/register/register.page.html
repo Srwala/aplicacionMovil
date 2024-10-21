@@ -1,11 +1,3 @@
-<ion-header>
-  <ion-toolbar style="--background:#ff8800; --color: #000000;">
-    <ion-buttons slot="start">
-      <ion-menu-button auto-hide="false"></ion-menu-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content class="ion-padding" scroll-padding="false" keyboard-attach>
   <div class="login-container">
     <ion-card class="transparent-card">
@@ -46,6 +38,10 @@
           <ion-button expand="block" type="submit" style="--background:#ff8800; --color: #000000;" class="ion-margin-top">
             Registrarte
           </ion-button>
+
+          <!-- Mostrar mensaje de error aquí -->
+          <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+
           <p>Al hacer clic en "Registrarte", aceptas nuestras Condiciones, la Política de privacidad y la Política de cookies.</p>
         </form>
       </ion-card-content>
