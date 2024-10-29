@@ -17,20 +17,20 @@
         <!-- Nombre de usuario -->
         <ion-item>
           <ion-label position="floating">Nombre de usuario</ion-label>
-          <ion-input [(ngModel)]="nombre"></ion-input>
+          <ion-input [(ngModel)]="username" name="username" required></ion-input>
         </ion-item>
 
         <!-- Contraseña -->
         <ion-item>
           <ion-label position="floating">Contraseña</ion-label>
-          <ion-input [(ngModel)]="password" type="password"></ion-input>
+          <ion-input [(ngModel)]="password" name="password" type="password" required></ion-input>
         </ion-item>
 
         <!-- Enlace para recuperar contraseña -->
         <a [routerLink]="['/recupera-clave']" class="forgot-password">¿Olvidaste tu contraseña?</a>
 
         <!-- Botón para iniciar sesión -->
-        <ion-button style="margin-top: 30px; --background:#ff8800; --color: #000000;" expand="block" (click)="onLogin()">
+        <ion-button style="margin-top: 30px; --background:#ff8800; --color: #000000;" expand="block" type="submit">
           Ingresar
         </ion-button>
       </ion-card-content>

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -7,29 +9,17 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage {
-  nombre: string = '';
+  username: string = '';
   password: string = '';
 
-  constructor(private navCtrl: NavController) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   // Método que se ejecuta al presionar el botón "Ingresar"
-  onLogin() {
-    if (this.nombre.trim() === '' || this.password.trim() === '') {
-      // Validación para campos vacíos
-      console.log('Por favor, ingresa un nombre de usuario y una contraseña');
-      return;
-    }
-
-    // Simulación de validación con credenciales fijas (puedes reemplazar con lógica real o API)
-    if (this.nombre === 'usuario' && this.password === '123456') {
-      // Guardar el nombre de usuario en el localStorage
-      localStorage.setItem('nombreUsuario', this.nombre);
-      console.log('Inicio de sesión exitoso');
-
-      // Redirigir a la página QR u otra página
-      this.navCtrl.navigateForward('/qr');
-    } else {
-      console.log('Credenciales incorrectas');
+    login(){
+      if (this.authService.login(this.username, this.password)) {
+        this.router.navigate(['/dashboard'], {state: {username: this.username}});
+      } else {
+        alert('Nombre de Usuario o Contraseña Incorrecta');
+      }
     }
   }
-}
