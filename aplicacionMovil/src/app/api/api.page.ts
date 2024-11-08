@@ -11,6 +11,7 @@ export class ApiPage implements OnInit {
   users: any[] = [];
   newFirstName: string = '';
   newLastName: string = '';
+  newImageUrl: string = ''; // Variable para almacenar la URL de la imagen
 
   constructor(private apiService: ApiService) {}
 
@@ -25,17 +26,23 @@ export class ApiPage implements OnInit {
     });
   }
 
-  // Agregar un nuevo estudiante
+  // Agregar un nuevo estudiante con validación y carga de imagen opcional
   addStudent() {
+    if (!this.newFirstName || !this.newLastName) {
+      alert('Por favor, ingrese el nombre y el apellido del estudiante.');
+      return;
+    }
+
     const newUser = {
       name: { first: this.newFirstName, last: this.newLastName },
-      picture: { thumbnail: 'assets/default-avatar.png' } // Avatar por defecto
+      picture: { thumbnail: this.newImageUrl || 'assets/default-avatar.png' } // Imagen opcional, si no hay, usa la predeterminada
     };
 
     this.apiService.addStudent(newUser).subscribe(updatedUsers => {
       this.users = updatedUsers;
       this.newFirstName = ''; // Limpiar el formulario
       this.newLastName = '';
+      this.newImageUrl = ''; // Limpiar la URL de la imagen
     });
   }
 
@@ -45,4 +52,5 @@ export class ApiPage implements OnInit {
       this.users = updatedUsers;
     });
   }
+
 }

@@ -1,31 +1,43 @@
 <ion-header>
-  <!-- Toolbar con menú y colores personalizados -->
-  <ion-toolbar style="--background:#ff8800; --color: #000000;">
+  <ion-toolbar style=" --background:#ff8800; --color: #000000;">
     <ion-buttons slot="start">
       <ion-menu-button auto-hide="false"></ion-menu-button>
     </ion-buttons>
-    <ion-title>Alumnos</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="home-content" style=" --background:#000000;">
+<ion-content>
+  <ion-card-content>
+  <form (ngSubmit)="addStudent()">
+    <ion-item style=" --background:#ff8800; --color: #000000;">
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="newFirstName" name="firstName" required></ion-input>
+    </ion-item>
+    
+    <ion-item style=" --background:#ff8800; --color: #000000;">
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input [(ngModel)]="newLastName" name="lastName" required></ion-input>
+    </ion-item>
 
-  <!-- Formulario para agregar un nuevo alumno -->
-  <ion-item>
-    <ion-label position="floating">Nombre</ion-label>
-    <ion-input [(ngModel)]="newFirstName"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Apellido</ion-label>
-    <ion-input [(ngModel)]="newLastName"></ion-input>
-  </ion-item>
-  <ion-button expand="full" (click)="addStudent()">Agregar Alumno</ion-button>
+    <ion-item style=" --background:#ff8800; --color: #000000;">
+      <ion-label position="floating">Imagen URL (opcional)</ion-label>
+      <ion-input [(ngModel)]="newImageUrl" name="imageUrl"></ion-input>
+    </ion-item>
 
-  <!-- Lista de estudiantes -->
-  <ion-list *ngFor="let user of users; let i = index">
-    <ion-item>
-      <img [src]="user.picture.thumbnail" />&nbsp;{{user.name.first}} {{user.name.last}}
-      <ion-button slot="end" color="danger" (click)="removeStudent(i)">Eliminar</ion-button>
+    <ion-button expand="full" type="submit" style=" --background:#ff8800; --color: #000000;">Agregar Estudiante</ion-button>
+  </form>
+
+  <ion-list>
+    <ion-item *ngFor="let user of users; let i = index">
+      <ion-avatar slot="start">
+        <img [src]="user.picture.thumbnail">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ user.name.first }} {{ user.name.last }}</h2>
+      </ion-label>
+      <ion-button (click)="removeStudent(i)" style=" --background:#ff8800; --color: #000000;">Eliminar</ion-button>
     </ion-item>
   </ion-list>
+</ion-card-content>
 </ion-content>
+
