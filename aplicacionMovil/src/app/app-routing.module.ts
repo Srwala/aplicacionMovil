@@ -36,6 +36,10 @@ const routes: Routes = [
     path: 'recupera-clave',
     loadChildren: () => import('./recupera-clave/recupera-clave.module').then( m => m.RecuperaClavePageModule)
   },
+  {
+    path: 'cambia-clave',
+    loadChildren: () => import('./cambia-clave/cambia-clave.module').then( m => m.CambiaClavePageModule)
+  },
 
 ];
 

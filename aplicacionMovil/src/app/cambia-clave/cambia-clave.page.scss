@@ -1,0 +1,61 @@
+ion-title {
+    text-align: center;
+}
+ion-card-header {
+    margin: 1em;
+}
+ion-card-title{
+    text-align: center;
+}
+.toolbar-container{
+    box-shadow: none;
+}
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  ion-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 20px; 
+  }
+ion-button{
+    margin-bottom: 3em;
+}
+ion-content {
+  --background: none;
+  background-image: url('/assets/images/wallpaper2.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+  ion-card-content{
+    --background: transparent;
+  }
+  .transparent-card {
+    width: 100%;
+    max-width: 400px; /* Ajusta según sea necesario */
+    margin: 0 20px; /* Espaciado lateral */
+    background: #ff8800 (255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 10px; 
+  }
+  ion-item {
+    --background: transparent; /* Fondo transparente para el item */
+    border: none; /* Quita cualquier borde si es visible */
+  }
+  
+  ion-input {
+    --padding-start: 10px; /* Asegura un padding interno */
+    --padding-end: 10px;
+    --background: transparent; /* Asegura que el input sea transparente */
+    --placeholder-color: #999; /* Ajusta el color del placeholder si es muy oscuro */
+  }
+  
+  ion-label {
+    color: #000; /* Ajusta el color del texto del label para mayor contraste */
+  }

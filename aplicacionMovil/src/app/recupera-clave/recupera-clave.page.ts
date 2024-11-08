@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-recupera-clave',
@@ -7,18 +7,26 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./recupera-clave.page.scss'],
 })
 export class RecuperaClavePage {
-  correo: string = ''; // Asegúrate de que la propiedad 'correo' esté definida
+  correo: string = '';
 
-  constructor(private alertController: AlertController) {}
+  constructor(
+    private alertController: AlertController,
+    private navCtrl: NavController
+  ) {}
 
   async onLogin() {
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$/;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     if (emailPattern.test(this.correo)) {
       const alert = await this.alertController.create({
         header: 'Éxito',
         message: 'El código de recuperación ha sido enviado a su correo',
-        buttons: ['OK'],
+        buttons: [{
+          text: 'OK',
+          handler: () => {
+            this.navCtrl.navigateForward('/cambia-clave');
+          }
+        }],
       });
       await alert.present();
     } else {
