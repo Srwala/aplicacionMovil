@@ -7,7 +7,7 @@ export class AuthService {
   private isAuthenticated = false;
 
   login(username: string, password: string): boolean {
-    if (username === 'usuario' && password == '1234'){
+    if (username === 'admin' && password == '1234'){
       this.isAuthenticated = true;
       return true;
     }
