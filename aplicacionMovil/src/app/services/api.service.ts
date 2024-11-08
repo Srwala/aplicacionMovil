@@ -7,6 +7,7 @@ import { catchError, map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class ApiService {
+
   private url = 'https://randomuser.me/api/?results=30';
 
   constructor(private http: HttpClient) {}
