@@ -1,0 +1,34 @@
+
+<ion-header>
+  <ion-toolbar style=" --background:#ff8800; --color: #000000;">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" scroll-padding="false" keyboard-attach>
+  <div class="login-container">
+    <ion-card class="transparent-card">
+      <ion-card-header>
+        <ion-card-title>Iniciar Sesión</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Correo Electrónico</ion-label>
+          <ion-input [(ngModel)]="nombre"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+
+        <ion-button style="margin-top: 30px; --background:#ff8800; --color: #000000;" expand="block" routerLink = '/qr' class="ion-margin-top" (click)="onLogin()">
+          Ingresar
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

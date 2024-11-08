@@ -39,7 +39,11 @@ const routes: Routes = [
   {
     path: 'cambia-clave',
     loadChildren: () => import('./cambia-clave/cambia-clave.module').then( m => m.CambiaClavePageModule)
+  },  {
+    path: 'alumno-view',
+    loadChildren: () => import('./alumno-view/alumno-view.module').then( m => m.AlumnoViewPageModule)
   },
+
 
 ];
 
