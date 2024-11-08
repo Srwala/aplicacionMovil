@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { canactivateGuard } from './canactivate.guard'; // Ajusta la ruta
 
 const routes: Routes = [
   {
@@ -29,9 +30,9 @@ const routes: Routes = [
   },
   {
     path: 'api',
-    loadChildren: () => import('./api/api.module').then( m => m.ApiPageModule)
+    loadChildren: () => import('./api/api.module').then( m => m.ApiPageModule), canActivate: [canactivateGuard]
   },
-  { path: 'api', loadChildren: () => import('./api/api.module').then(m => m.ApiPageModule) },  {
+  {
     path: 'recupera-clave',
     loadChildren: () => import('./recupera-clave/recupera-clave.module').then( m => m.RecuperaClavePageModule)
   },
