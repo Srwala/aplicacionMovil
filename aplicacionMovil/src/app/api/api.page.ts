@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
+import { CanComponentDeactivate } from '../candeactivate.guard';
+
 
 @Component({
   selector: 'app-api',
@@ -12,6 +14,8 @@ export class ApiPage implements OnInit {
   newFirstName: string = '';
   newLastName: string = '';
   newImageUrl: string = ''; // Variable para almacenar la URL de la imagen
+
+  
 
   constructor(private apiService: ApiService) {}
 

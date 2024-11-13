@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { canactivateGuard } from './canactivate.guard'; // Ajusta la ruta
+import { CandeactivateGuard } from './candeactivate.guard';
 
 const routes: Routes = [
   {
@@ -30,7 +31,7 @@ const routes: Routes = [
   },
   {
     path: 'api',
-    loadChildren: () => import('./api/api.module').then( m => m.ApiPageModule), canActivate: [canactivateGuard]
+    loadChildren: () => import('./api/api.module').then( m => m.ApiPageModule), canActivate: [canactivateGuard], canDeactivate: [CandeactivateGuard]
   },
   {
     path: 'recupera-clave',
@@ -39,7 +40,8 @@ const routes: Routes = [
   {
     path: 'cambia-clave',
     loadChildren: () => import('./cambia-clave/cambia-clave.module').then( m => m.CambiaClavePageModule)
-  },  {
+  },
+  {
     path: 'alumno-view',
     loadChildren: () => import('./alumno-view/alumno-view.module').then( m => m.AlumnoViewPageModule)
   },
