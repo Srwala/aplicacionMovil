@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { AlertController } from '@ionic/angular';
+import { DataServiceService } from '../services/data-service.service';
 
 @Component({
   selector: 'app-login',
@@ -14,9 +15,9 @@ export class LoginPage {
 
   constructor(private authService: AuthService,
               private router: Router,
-              private alertController: AlertController) {}
+              private alertController: AlertController,
+              private dataService: DataServiceService) {}
 
-  // Método que se ejecuta al presionar el botón "Ingresar"
   async login() {
     if (this.authService.login(this.username, this.password)) {
       this.router.navigate(['/api'], { state: { username: this.username } });

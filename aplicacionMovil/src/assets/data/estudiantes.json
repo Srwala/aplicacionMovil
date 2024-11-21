@@ -1,0 +1,543 @@
+     {
+       "estudiantes": [
+    {
+        "nombre": "Paula",
+        "apellido_paterno": "Rodríguez",
+        "apellido_materno": "González",
+        "edad": 29,
+        "correo": "paula.rodríguez@example.com",
+        "curso": "matemáticas",
+        "contraseña": "paula1024"
+    },
+    {
+        "nombre": "Pedro",
+        "apellido_paterno": "Jiménez",
+        "apellido_materno": "Pérez",
+        "edad": 20,
+        "correo": "pedro.jiménez@example.com",
+        "curso": "matemáticas",
+        "contraseña": "pedro1151"
+    },
+    {
+        "nombre": "Laura",
+        "apellido_paterno": "López",
+        "apellido_materno": "Martínez",
+        "edad": 26,
+        "correo": "laura.lópez@example.com",
+        "curso": "estadística",
+        "contraseña": "laura8779"
+    },
+    {
+        "nombre": "Diego",
+        "apellido_paterno": "López",
+        "apellido_materno": "López",
+        "edad": 18,
+        "correo": "diego.lópez@example.com",
+        "curso": "estadística",
+        "contraseña": "diego3336"
+    },
+    {
+        "nombre": "Carlos",
+        "apellido_paterno": "Díaz",
+        "apellido_materno": "Sánchez",
+        "edad": 28,
+        "correo": "carlos.díaz@example.com",
+        "curso": "estadística",
+        "contraseña": "carlos5191"
+    },
+    {
+        "nombre": "Valeria",
+        "apellido_paterno": "Díaz",
+        "apellido_materno": "Martínez",
+        "edad": 26,
+        "correo": "valeria.díaz@example.com",
+        "curso": "estadística",
+        "contraseña": "valeria7837"
+    },
+    {
+        "nombre": "Sofía",
+        "apellido_paterno": "Sánchez",
+        "apellido_materno": "Gómez",
+        "edad": 24,
+        "correo": "sofía.sánchez@example.com",
+        "curso": "programación",
+        "contraseña": "sofía1935"
+    },
+    {
+        "nombre": "Santiago",
+        "apellido_paterno": "López",
+        "apellido_materno": "Sánchez",
+        "edad": 23,
+        "correo": "santiago.lópez@example.com",
+        "curso": "física",
+        "contraseña": "santiago6742"
+    },
+    {
+        "nombre": "Miguel",
+        "apellido_paterno": "Pérez",
+        "apellido_materno": "Sánchez",
+        "edad": 26,
+        "correo": "miguel.pérez@example.com",
+        "curso": "física",
+        "contraseña": "miguel8838"
+    },
+    {
+        "nombre": "Lucía",
+        "apellido_paterno": "Díaz",
+        "apellido_materno": "Gómez",
+        "edad": 19,
+        "correo": "lucía.díaz@example.com",
+        "curso": "programación",
+        "contraseña": "lucía5340"
+    },
+    {
+        "nombre": "Valeria",
+        "apellido_paterno": "Díaz",
+        "apellido_materno": "Gómez",
+        "edad": 18,
+        "correo": "valeria.díaz@example.com",
+        "curso": "física",
+        "contraseña": "valeria9008"
+    },
+    {
+        "nombre": "Gabriel",
+        "apellido_paterno": "López",
+        "apellido_materno": "Martínez",
+        "edad": 25,
+        "correo": "gabriel.lópez@example.com",
+        "curso": "estadística",
+        "contraseña": "gabriel3261"
+    },
+    {
+        "nombre": "María",
+        "apellido_paterno": "Sánchez",
+        "apellido_materno": "Jiménez",
+        "edad": 24,
+        "correo": "maría.sánchez@example.com",
+        "curso": "programación",
+        "contraseña": "maría5087"
+    },
+    {
+        "nombre": "Manuel",
+        "apellido_paterno": "Sánchez",
+        "apellido_materno": "González",
+        "edad": 28,
+        "correo": "manuel.sánchez@example.com",
+        "curso": "programación",
+        "contraseña": "manuel5861"
+    },
+    {
+        "nombre": "Camila",
+        "apellido_paterno": "Jiménez",
+        "apellido_materno": "Rodríguez",
+        "edad": 27,
+        "correo": "camila.jiménez@example.com",
+        "curso": "programación",
+        "contraseña": "camila8680"
+    },
+    {
+        "nombre": "Manuel",
+        "apellido_paterno": "Sánchez",
+        "apellido_materno": "González",
+        "edad": 27,
+        "correo": "manuel.sánchez@example.com",
+        "curso": "estadística",
+        "contraseña": "manuel8574"
+    },
+    {
+        "nombre": "Camila",
+        "apellido_paterno": "Pérez",
+        "apellido_materno": "López",
+        "edad": 23,
+        "correo": "camila.pérez@example.com",
+        "curso": "matemáticas",
+        "contraseña": "camila6385"
+    },
+    {
+        "nombre": "Fernanda",
+        "apellido_paterno": "Díaz",
+        "apellido_materno": "Jiménez",
+        "edad": 29,
+        "correo": "fernanda.díaz@example.com",
+        "curso": "matemáticas",
+        "contraseña": "fernanda4533"
+    },
+    {
+        "nombre": "Miguel",
+        "apellido_paterno": "González",
+        "apellido_materno": "Martínez",
+        "edad": 25,
+        "correo": "miguel.gonzález@example.com",
+        "curso": "estadística",
+        "contraseña": "miguel1262"
+    },
+    {
+        "nombre": "Isabel",
+        "apellido_paterno": "Sánchez",
+        "apellido_materno": "González",
+        "edad": 19,
+        "correo": "isabel.sánchez@example.com",
+        "curso": "matemáticas",
+        "contraseña": "isabel8149"
+    },
+    {
+        "nombre": "Valeria",
+        "apellido_paterno": "Rodríguez",
+        "apellido_materno": "López",
+        "edad": 19,
+        "correo": "valeria.rodríguez@example.com",
+        "curso": "física",
+        "contraseña": "valeria7529"
+    },
+    {
+        "nombre": "Miguel",
+        "apellido_paterno": "Sánchez",
+        "apellido_materno": "Díaz",
+        "edad": 19,
+        "correo": "miguel.sánchez@example.com",
+        "curso": "estadística",
+        "contraseña": "miguel1341"
+    },
+    {
+        "nombre": "Pedro",
+        "apellido_paterno": "Díaz",
+        "apellido_materno": "Díaz",
+        "edad": 29,
+        "correo": "pedro.díaz@example.com",
+        "curso": "estadística",
+        "contraseña": "pedro7302"
+    },
+    {
+        "nombre": "Luis",
+        "apellido_paterno": "González",
+        "apellido_materno": "Martínez",
+        "edad": 28,
+        "correo": "luis.gonzález@example.com",
+        "curso": "matemáticas",
+        "contraseña": "luis3246"
+    },
+    {
+        "nombre": "Paula",
+        "apellido_paterno": "Martínez",
+        "apellido_materno": "Rodríguez",
+        "edad": 28,
+        "correo": "paula.martínez@example.com",
+        "curso": "física",
+        "contraseña": "paula9519"
+    },
+    {
+        "nombre": "Fernanda",
+        "apellido_paterno": "Díaz",
+        "apellido_materno": "Gómez",
+        "edad": 24,
+        "correo": "fernanda.díaz@example.com",
+        "curso": "física",
+        "contraseña": "fernanda2780"
+    },
+    {
+        "nombre": "Camila",
+        "apellido_paterno": "Sánchez",
+        "apellido_materno": "Martínez",
+        "edad": 22,
+        "correo": "camila.sánchez@example.com",
+        "curso": "matemáticas",
+        "contraseña": "camila8966"
+    },
+    {
+        "nombre": "Javier",
+        "apellido_paterno": "Rodríguez",
+        "apellido_materno": "López",
+        "edad": 27,
+        "correo": "javier.rodríguez@example.com",
+        "curso": "programación",
+        "contraseña": "javier7091"
+    },
+    {
+        "nombre": "Santiago",
+        "apellido_paterno": "Sánchez",
+        "apellido_materno": "Fernández",
+        "edad": 18,
+        "correo": "santiago.sánchez@example.com",
+        "curso": "estadística",
+        "contraseña": "santiago6621"
+    },
+    {
+        "nombre": "Valeria",
+        "apellido_paterno": "Jiménez",
+        "apellido_materno": "Gómez",
+        "edad": 22,
+        "correo": "valeria.jiménez@example.com",
+        "curso": "física",
+        "contraseña": "valeria2482"
+    },
+    {
+        "nombre": "Diego",
+        "apellido_paterno": "Jiménez",
+        "apellido_materno": "Pérez",
+        "edad": 24,
+        "correo": "diego.jiménez@example.com",
+        "curso": "matemáticas",
+        "contraseña": "diego6941"
+    },
+    {
+        "nombre": "Ana",
+        "apellido_paterno": "Díaz",
+        "apellido_materno": "González",
+        "edad": 18,
+        "correo": "ana.díaz@example.com",
+        "curso": "estadística",
+        "contraseña": "ana6060"
+    },
+    {
+        "nombre": "Manuel",
+        "apellido_paterno": "Díaz",
+        "apellido_materno": "Díaz",
+        "edad": 20,
+        "correo": "manuel.díaz@example.com",
+        "curso": "estadística",
+        "contraseña": "manuel7565"
+    },
+    {
+        "nombre": "María",
+        "apellido_paterno": "González",
+        "apellido_materno": "Rodríguez",
+        "edad": 18,
+        "correo": "maría.gonzález@example.com",
+        "curso": "matemáticas",
+        "contraseña": "maría8069"
+    },
+    {
+        "nombre": "Manuel",
+        "apellido_paterno": "Sánchez",
+        "apellido_materno": "Martínez",
+        "edad": 25,
+        "correo": "manuel.sánchez@example.com",
+        "curso": "física",
+        "contraseña": "manuel2726"
+    },
+    {
+        "nombre": "Carlos",
+        "apellido_paterno": "Jiménez",
+        "apellido_materno": "Gómez",
+        "edad": 22,
+        "correo": "carlos.jiménez@example.com",
+        "curso": "matemáticas",
+        "contraseña": "carlos7200"
+    },
+    {
+        "nombre": "Andrés",
+        "apellido_paterno": "Gómez",
+        "apellido_materno": "González",
+        "edad": 25,
+        "correo": "andrés.gómez@example.com",
+        "curso": "estadística",
+        "contraseña": "andrés5684"
+    },
+    {
+        "nombre": "Fernanda",
+        "apellido_paterno": "López",
+        "apellido_materno": "Sánchez",
+        "edad": 18,
+        "correo": "fernanda.lópez@example.com",
+        "curso": "matemáticas",
+        "contraseña": "fernanda8587"
+    },
+    {
+        "nombre": "María",
+        "apellido_paterno": "Díaz",
+        "apellido_materno": "González",
+        "edad": 20,
+        "correo": "maría.díaz@example.com",
+        "curso": "física",
+        "contraseña": "maría2075"
+    },
+    {
+        "nombre": "Manuel",
+        "apellido_paterno": "Sánchez",
+        "apellido_materno": "Pérez",
+        "edad": 29,
+        "correo": "manuel.sánchez@example.com",
+        "curso": "matemáticas",
+        "contraseña": "manuel1128"
+    },
+    {
+        "nombre": "Javier",
+        "apellido_paterno": "López",
+        "apellido_materno": "López",
+        "edad": 19,
+        "correo": "javier.lópez@example.com",
+        "curso": "física",
+        "contraseña": "javier4529"
+    },
+    {
+        "nombre": "Diego",
+        "apellido_paterno": "Fernández",
+        "apellido_materno": "Gómez",
+        "edad": 28,
+        "correo": "diego.fernández@example.com",
+        "curso": "física",
+        "contraseña": "diego4487"
+    },
+    {
+        "nombre": "Lucía",
+        "apellido_paterno": "López",
+        "apellido_materno": "Sánchez",
+        "edad": 18,
+        "correo": "lucía.lópez@example.com",
+        "curso": "estadística",
+        "contraseña": "lucía6082"
+    },
+    {
+        "nombre": "Diego",
+        "apellido_paterno": "Rodríguez",
+        "apellido_materno": "Fernández",
+        "edad": 26,
+        "correo": "diego.rodríguez@example.com",
+        "curso": "programación",
+        "contraseña": "diego2814"
+    },
+    {
+        "nombre": "María",
+        "apellido_paterno": "Jiménez",
+        "apellido_materno": "González",
+        "edad": 28,
+        "correo": "maría.jiménez@example.com",
+        "curso": "física",
+        "contraseña": "maría9603"
+    },
+    {
+        "nombre": "María",
+        "apellido_paterno": "Pérez",
+        "apellido_materno": "Díaz",
+        "edad": 21,
+        "correo": "maría.pérez@example.com",
+        "curso": "estadística",
+        "contraseña": "maría8204"
+    },
+    {
+        "nombre": "María",
+        "apellido_paterno": "Fernández",
+        "apellido_materno": "López",
+        "edad": 24,
+        "correo": "maría.fernández@example.com",
+        "curso": "estadística",
+        "contraseña": "maría5685"
+    },
+    {
+        "nombre": "Gabriel",
+        "apellido_paterno": "Fernández",
+        "apellido_materno": "Martínez",
+        "edad": 21,
+        "correo": "gabriel.fernández@example.com",
+        "curso": "matemáticas",
+        "contraseña": "gabriel3248"
+    },
+    {
+        "nombre": "Camila",
+        "apellido_paterno": "Fernández",
+        "apellido_materno": "López",
+        "edad": 22,
+        "correo": "camila.fernández@example.com",
+        "curso": "física",
+        "contraseña": "camila2547"
+    },
+    {
+        "nombre": "Gabriel",
+        "apellido_paterno": "Gómez",
+        "apellido_materno": "López",
+        "edad": 25,
+        "correo": "gabriel.gómez@example.com",
+        "curso": "física",
+        "contraseña": "gabriel4202"
+    },
+    {
+        "nombre": "Gabriel",
+        "apellido_paterno": "Rodríguez",
+        "apellido_materno": "González",
+        "edad": 26,
+        "correo": "gabriel.rodríguez@example.com",
+        "curso": "matemáticas",
+        "contraseña": "gabriel4092"
+    },
+    {
+        "nombre": "Manuel",
+        "apellido_paterno": "Díaz",
+        "apellido_materno": "Rodríguez",
+        "edad": 18,
+        "correo": "manuel.díaz@example.com",
+        "curso": "programación",
+        "contraseña": "manuel6311"
+    },
+    {
+        "nombre": "Santiago",
+        "apellido_paterno": "Rodríguez",
+        "apellido_materno": "Díaz",
+        "edad": 26,
+        "correo": "santiago.rodríguez@example.com",
+        "curso": "estadística",
+        "contraseña": "santiago6834"
+    },
+    {
+        "nombre": "Pedro",
+        "apellido_paterno": "Díaz",
+        "apellido_materno": "Rodríguez",
+        "edad": 23,
+        "correo": "pedro.díaz@example.com",
+        "curso": "matemáticas",
+        "contraseña": "pedro4902"
+    },
+    {
+        "nombre": "Andrés",
+        "apellido_paterno": "González",
+        "apellido_materno": "Sánchez",
+        "edad": 26,
+        "correo": "andrés.gonzález@example.com",
+        "curso": "estadística",
+        "contraseña": "andrés9574"
+    },
+    {
+        "nombre": "Gabriel",
+        "apellido_paterno": "Pérez",
+        "apellido_materno": "Pérez",
+        "edad": 21,
+        "correo": "gabriel.pérez@example.com",
+        "curso": "programación",
+        "contraseña": "gabriel2203"
+    },
+    {
+        "nombre": "Paula",
+        "apellido_paterno": "Díaz",
+        "apellido_materno": "López",
+        "edad": 30,
+        "correo": "paula.díaz@example.com",
+        "curso": "matemáticas",
+        "contraseña": "paula1815"
+    },
+    {
+        "nombre": "Carlos",
+        "apellido_paterno": "Díaz",
+        "apellido_materno": "González",
+        "edad": 26,
+        "correo": "carlos.díaz@example.com",
+        "curso": "estadística",
+        "contraseña": "carlos9022"
+    },
+    {
+        "nombre": "Diego",
+        "apellido_paterno": "López",
+        "apellido_materno": "Pérez",
+        "edad": 27,
+        "correo": "diego.lópez@example.com",
+        "curso": "estadística",
+        "contraseña": "diego3851"
+    },
+    {
+        "nombre": "Camila",
+        "apellido_paterno": "Gómez",
+        "apellido_materno": "Gómez",
+        "edad": 24,
+        "correo": "camila.gómez@example.com",
+        "curso": "programación",
+        "contraseña": "camila4713"
+    }
+]}

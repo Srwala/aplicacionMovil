@@ -1,0 +1,39 @@
+{
+   "profesores": [
+    {
+        "nombre": "Daniel",
+        "apellido_paterno": "Matamala",
+        "apellido_materno": "Rodríguez",
+        "edad": 58,
+        "correo": "daniel.matamala@profesor.com",
+        "curso": "matemáticas",
+        "contraseña": "daniel8584"
+    },
+    {
+        "nombre": "María",
+        "apellido_paterno": "Corina",
+        "apellido_materno": "Machado",
+        "edad": 30,
+        "correo": "maria.corina@profesor.com",
+        "curso": "estadística",
+        "contraseña": "maria1775"
+    },
+    {
+        "nombre": "Isabel",
+        "apellido_paterno": "Torres",
+        "apellido_materno": "Jiménez",
+        "edad": 27,
+        "correo": "isabel.torres@profesor.com",
+        "curso": "física",
+        "contraseña": "isabel1364"
+    },
+    {
+        "nombre": "Gervasio",
+        "apellido_paterno": "Sanchez",
+        "apellido_materno": "González",
+        "edad": 34,
+        "correo": "gervacio.fernandez@profesor.com",
+        "curso": "programación",
+        "contraseña": "isabel2315"
+    }
+]}

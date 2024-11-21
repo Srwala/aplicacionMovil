@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { AuthService } from './auth.service'; // Ajusta la ruta si es necesario
 import { Router } from '@angular/router';
 import { CanComponentDeactivate } from './candeactivate.guard';
+import { ApiService } from './services/api.service';
+import { DataServiceService } from './services/data-service.service';
+
+
 
 @Component({
   selector: 'app-root',
@@ -15,9 +19,11 @@ export class AppComponent implements CanComponentDeactivate {
     return confirm('¿Estás seguro de que deseas cerrar la sesión?');
   }
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router, private data: DataServiceService) {}
 
-  ngOnInit() {
+  
+
+  async ngOnInit() {
     this.authService.authState$.subscribe((state) => {
       this.isLoggedIn = state;
     });
