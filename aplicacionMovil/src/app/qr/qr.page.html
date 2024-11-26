@@ -7,16 +7,26 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="home-content">
-  <ion-header collapse="condense">
-   
-  </ion-header>
+  <ion-header collapse="condense"></ion-header>
 
   <div id="welcome-container" style="text-align: center; margin-top: 50px;">
     <img src="assets/images/logo.svg" alt="App Logo" style="width: 150px; margin-bottom: 20px;">
-    <h1 style="color: #ffffff;">Bienvenido  {{ nombreRecuperado }} a Nuestra app!</h1>
+    <h1 style="color: #ffffff;">Bienvenido {{ nombreRecuperado }} a Nuestra app!</h1>
     <p style="color: #ffffff; font-size: 1.2em;">
-      Escanea el código QR para quedar presente :
+      Escanea el código QR para quedar presente
     </p>
-    <img src="assets/icon/fin.svg" alt="App Logo" style="width: 150px; margin-bottom: 20px;">
+
+    <ion-button expand="block" style="margin-top: 20px;" (click)="startScan()">
+      Escanear QR
+    </ion-button>
+  
+    <ion-button expand="block" color="danger" (click)="stopScan()" *ngIf="isScanning">
+      Detener Escaneo
+    </ion-button>
+  
+    <div *ngIf="scannedResult">
+      <h2>Resultado Escaneado:</h2>
+      <p>{{ scannedResult }}</p>
+    </div>
   </div>
 </ion-content>
