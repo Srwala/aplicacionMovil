@@ -18,6 +18,6 @@ export class VistaProfesorPage implements OnInit {
   }
 
   verAlumnos(curso: string) {
-    this.router.navigate(['/profesor-alumnos', { curso }]);
+    this.router.navigate(['/lista-alumnos', { curso }]);
   }
 }

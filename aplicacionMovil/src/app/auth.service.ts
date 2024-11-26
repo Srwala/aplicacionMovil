@@ -73,6 +73,13 @@ export class AuthService {
     const curso = usuario?.curso || ''; // Extraer el curso del profesor actual
     return curso ? [curso] : []; // Devuelve un array con el curso o vacío si no hay curso
   }
+
+  async getCursoEstudiante(): Promise<string[]> {
+    const usuario = await this.getUsuarioActual();
+    const cursos = usuario?.cursos || []; // Extraer los cursos del estudiante actual
+    return cursos; // Devuelve un array con los cursos del estudiante
+  }
+
   
 }
 

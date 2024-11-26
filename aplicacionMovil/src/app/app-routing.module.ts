@@ -13,6 +13,8 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  { path: 'profesor-cursos', loadChildren: () => import('./vista-profesor/vista-profesor.module').then(m => m.VistaProfesorPageModule) },
+  { path: 'lista-alumnos', loadChildren: () => import('./lista-profesor/lista-profesor.module').then(m => m.ListaProfesorPageModule) },
   {
     path: 'access',
     loadChildren: () => import('./access/access.module').then( m => m.AccessPageModule)
@@ -44,13 +46,18 @@ const routes: Routes = [
   {
     path: 'alumno-view',
     loadChildren: () => import('./alumno-view/alumno-view.module').then( m => m.AlumnoViewPageModule)
-  },  {
+  },
+  {
     path: 'vista-estudiante',
     loadChildren: () => import('./vista-estudiante/vista-estudiante.module').then( m => m.VistaEstudiantePageModule)
   },
   {
     path: 'vista-profesor',
     loadChildren: () => import('./vista-profesor/vista-profesor.module').then( m => m.VistaProfesorPageModule)
+  },
+  {
+    path: 'lista-profesor',
+    loadChildren: () => import('./lista-profesor/lista-profesor.module').then( m => m.ListaProfesorPageModule)
   },
 
 
