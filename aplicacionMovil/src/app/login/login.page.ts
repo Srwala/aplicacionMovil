@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
-import { AlertController } from '@ionic/angular';
-import { DataServiceService } from '../services/data-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,25 +8,24 @@ import { DataServiceService } from '../services/data-service.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage {
-  username: string = '';
+  email: string = '';
   password: string = '';
+  errorMessage: string = '';
 
-  constructor(private authService: AuthService,
-              private router: Router,
-              private alertController: AlertController,
-              private dataService: DataServiceService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
-  async login() {
-    if (this.authService.login(this.username, this.password)) {
-      this.router.navigate(['/api'], { state: { username: this.username } });
+  async onLogin() {
+    const success = await this.authService.login(this.email, this.password);
+    if (success) {
+      // Redirige según el rol
+      const usuario = await this.authService.getUsuarioActual();
+      if (usuario.curso) {
+        this.router.navigate(['/vista-profesor']);
+      } else {
+        this.router.navigate(['/vista-profesor']);
+      }
     } else {
-      const alert = await this.alertController.create({
-        header: 'Error',
-        message: 'Nombre de Usuario o Contraseña Incorrecta',
-        buttons: ['OK']
-      });
-      await alert.present();
+      this.errorMessage = 'Correo o contraseña incorrectos';
     }
   }
 }
-  

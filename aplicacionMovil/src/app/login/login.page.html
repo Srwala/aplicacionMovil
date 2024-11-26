@@ -15,9 +15,10 @@
 
       <ion-card-content>
         <!-- Nombre de usuario -->
+         <form (ngSubmit)="onLogin()">
         <ion-item>
           <ion-label position="floating">Nombre de usuario</ion-label>
-          <ion-input [(ngModel)]="username" name="username" required></ion-input>
+          <ion-input [(ngModel)]="email" name="username" required></ion-input>
         </ion-item>
 
         <!-- Contraseña -->
@@ -30,9 +31,10 @@
         <a [routerLink]="['/recupera-clave']" class="forgot-password">¿Olvidaste tu contraseña?</a>
 
         <!-- Botón para iniciar sesión -->
-        <ion-button style="margin-top: 30px; --background:#ff8800; --color: #000000;" expand="block" (click)="login()">
+        <ion-button type="submit" style="margin-top: 30px; --background:#ff8800; --color: #000000;" expand="block">
           Ingresar
         </ion-button>
+      </form>
       </ion-card-content>
     </ion-card>
   </div>
