@@ -49,15 +49,15 @@ const routes: Routes = [
   },
   {
     path: 'vista-estudiante',
-    loadChildren: () => import('./vista-estudiante/vista-estudiante.module').then( m => m.VistaEstudiantePageModule)
+    loadChildren: () => import('./vista-estudiante/vista-estudiante.module').then( m => m.VistaEstudiantePageModule) , canActivate: [canactivateGuard], canDeactivate: [CandeactivateGuard]
   },
   {
     path: 'vista-profesor',
-    loadChildren: () => import('./vista-profesor/vista-profesor.module').then( m => m.VistaProfesorPageModule)
+    loadChildren: () => import('./vista-profesor/vista-profesor.module').then( m => m.VistaProfesorPageModule) , canActivate: [canactivateGuard], canDeactivate: [CandeactivateGuard]
   },
   {
     path: 'lista-profesor',
-    loadChildren: () => import('./lista-profesor/lista-profesor.module').then( m => m.ListaProfesorPageModule)
+    loadChildren: () => import('./lista-profesor/lista-profesor.module').then( m => m.ListaProfesorPageModule) , canActivate: [canactivateGuard], canDeactivate: [CandeactivateGuard]
   },
 
 

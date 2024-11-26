@@ -22,7 +22,7 @@ export class LoginPage {
       if (usuario.curso) {
         this.router.navigate(['/vista-profesor']);
       } else {
-        this.router.navigate(['/vista-profesor']);
+        this.router.navigate(['/qr']);
       }
     } else {
       this.errorMessage = 'Correo o contraseña incorrectos';

@@ -9,15 +9,18 @@ import { Router } from '@angular/router';
 })
 export class VistaProfesorPage implements OnInit {
   cursos: string[] = [];
+  nombre: string = '';
 
   constructor(private authService: AuthService, private router: Router) {}
 
   async ngOnInit() {
     this.cursos = await this.authService.getCursoProfesor();
     console.log(this.cursos)
+    this.nombre = await this.authService.getNombreUsuario();
   }
 
   verAlumnos(curso: string) {
     this.router.navigate(['/lista-alumnos', { curso }]);
   }
+  
 }

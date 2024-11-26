@@ -79,7 +79,10 @@ export class AuthService {
     const cursos = usuario?.cursos || []; // Extraer los cursos del estudiante actual
     return cursos; // Devuelve un array con los cursos del estudiante
   }
-
+async getNombreUsuario()  {
+    const usuario = await this.getUsuarioActual();
+    return usuario?.nombre || '';
+  }
   
 }
 

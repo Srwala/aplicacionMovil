@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <h2>Cursos Asignados</h2>
+  <h2>Cursos Asignados de {{ nombre }} </h2>
   <ion-list>
     <ion-item *ngFor="let curso of cursos" (click)="verAlumnos(curso)">
       <ion-button> {{ curso }} </ion-button>
